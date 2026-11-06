@@ -40,3 +40,10 @@ Pendências conhecidas:
 - Erros de domínio via `AppError(status, code, mensagem pt-BR)`.
 - Toda regra nova de horário precisa de teste em `tests/`.
 - Express 5: rotas não aceitam regex no parâmetro (`/:id(\d+)` quebra); valide o id no handler.
+
+## Deploy (Vercel + Neon)
+- Repo público: https://github.com/andrelabella35-web/agenda-barbearia (branch `main`).
+- Vercel (time `delabella`), projeto `agenda-barbearia`: Express roda como função serverless em `api/index.ts`; estáticos são copiados de `web/` para `public/` por `scripts/build-static.mjs` (`vercel.json`, `framework: null`). `/api/*` e `/media/*` são reescritos para a função.
+- Neon: projeto `agenda-demo` (`purple-cloud-70573960`), banco separado do painel de estoque. Variáveis na Vercel (produção, ocultas): `DATABASE_URL`, `JWT_SECRET`, `DB_POOL_MAX=3`. Em produção o servidor se recusa a iniciar sem `JWT_SECRET`.
+- Migrations/seed na Neon: rodar localmente com `DATABASE_URL=<neon> npm run migrate && npm run seed`. A senha do admin online foi gerada aleatória no seed (não é `admin123`).
+- Deploy: `npx vercel@latest deploy --prod` na pasta (já linkada). Não há deploy automático por push (repo ainda não conectado ao projeto Vercel).
