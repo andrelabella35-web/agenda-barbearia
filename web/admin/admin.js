@@ -21,7 +21,7 @@ function logout() { S.token = null; store.set('token', null); boot(); }
 // ---------- Login ----------
 function loginView() {
   const err = h('div', {});
-  const email = h('input', { type: 'email', required: true, value: '', autocomplete: 'username' });
+  const email = h('input', { type: 'text', required: true, value: '', autocomplete: 'username' });
   const pass = h('input', { type: 'password', required: true, autocomplete: 'current-password' });
   clear(root).append(h('div', { class: 'login' }, h('form', { class: 'card', onSubmit: async (e) => {
     e.preventDefault(); clear(err);
@@ -30,7 +30,7 @@ function loginView() {
       S.token = r.token; store.set('token', r.token); boot();
     } catch (x) { err.append(h('div', { class: 'msg err' }, x.message)); }
   } }, h('h1', {}, 'Sistema Barbearia'), h('p', { class: 'muted' }, 'Entre para gerenciar a agenda'),
-  h('div', { class: 'field' }, h('label', {}, 'E-mail'), email), h('div', { class: 'field' }, h('label', {}, 'Senha'), pass), err,
+  h('div', { class: 'field' }, h('label', {}, 'Usuário ou e-mail'), email), h('div', { class: 'field' }, h('label', {}, 'Senha'), pass), err,
   h('button', { class: 'btn', style: { width: '100%' } }, 'Entrar'))));
 }
 
