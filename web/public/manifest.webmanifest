@@ -1,0 +1,3 @@
+{ "name": "Agendar - Barbearia Studio", "short_name": "Agendar", "start_url": "/", "scope": "/", "display": "standalone",
+  "background_color": "#0b2a3c", "theme_color": "#0b2a3c", "lang": "pt-BR",
+  "icons": [{ "src": "/shared/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }] }

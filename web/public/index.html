@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agende seu horário</title>
+  <meta name="theme-color" content="#0b2a3c">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/shared/icon.svg">
+  <link rel="stylesheet" href="/shared/base.css">
+  <link rel="stylesheet" href="/site.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="logo" href="#top" id="logo">BARBEARIA STUDIO</a>
+    <nav>
+      <a href="#top">Home</a><a href="#agendar">Agendamentos</a><a href="#servicos">Serviços</a>
+      <a href="/admin/" title="Área administrativa" aria-label="Área administrativa">👤</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <h1 id="heroTitle">Cortes Profissionais</h1>
+      <p id="heroText"></p>
+      <a class="btn cta" href="#agendar" id="cta">Agendar agora</a>
+      <p class="hours muted-light" id="hoursInfo"></p>
+    </div>
+  </section>
+
+  <main>
+    <section id="agendar" class="wrap">
+      <h2>Agende seu horário</h2>
+      <ol class="steps" id="steps"></ol>
+      <div class="card" id="panel" aria-live="polite"></div>
+    </section>
+    <section id="servicos" class="wrap">
+      <h2>Nossos serviços</h2>
+      <div class="svc-grid" id="svcGrid"></div>
+    </section>
+  </main>
+  <footer class="foot"><span id="footName"></span> · Atendimento de segunda a sábado</footer>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

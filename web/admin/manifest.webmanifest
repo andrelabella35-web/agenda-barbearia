@@ -1,0 +1,3 @@
+{ "name": "Painel - Barbearia Studio", "short_name": "Painel", "start_url": "/admin/", "scope": "/admin/", "display": "standalone",
+  "background_color": "#212b36", "theme_color": "#212b36", "lang": "pt-BR",
+  "icons": [{ "src": "/shared/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }] }

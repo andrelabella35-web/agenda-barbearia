@@ -1,0 +1,8 @@
+{
+  "buildCommand": "node scripts/build-static.mjs",
+  "outputDirectory": "public",
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api" },
+    { "source": "/media/(.*)", "destination": "/api" }
+  ]
+}
